@@ -35,10 +35,9 @@ h1, h2, h3, p {color: hsl(0, 0%, 100%);}
     filter: brightness(125%);
 }
 
-
-input[type="checkbox"].check + label::before {
-    background-color: hsl(223, 31%, 20%);
-}
-input[type="checkbox"].check + label::after {
+#one {
     background-color: hsl(6, 63%, 50%);
+    left: 0;
+    top: 0;
 }
+.toggle {background-color: hsl(223, 31%, 20%);}

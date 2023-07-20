@@ -45,13 +45,11 @@ body {
     align-items: center;
     justify-items: center;
     min-height: 100vh;
-    /* background-color: hsl(222, 26%, 31%); */
 }
 main {
     width: 340px;
     margin: 2rem auto 2rem;
 }
-/* label {color: hsl(0, 0%, 100%);} */
 nav {
     display: flex;
     justify-content: space-between;
@@ -73,7 +71,6 @@ p {
 p:nth-child(1){margin-left: 0.65rem;}
 p:nth-child(3) {margin: 0;}
 .display-section {
-    /* background-color: hsl(224, 36%, 15%); */
     height: 5rem;
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
@@ -89,7 +86,6 @@ h2 {
     letter-spacing: 0.1rem;
 }
 .button-section {
-    /* background-color: hsl(223, 31%, 20%); */
     padding: 1.5rem;
     border-radius: 0.5rem;
 }
@@ -105,13 +101,10 @@ h2 {
 .btn-1 {
     width: 3.75rem;
     height: 2.75rem;
-    /* color: hsl(221, 14%, 31%); */
-    /* background-color: hsl(30, 25%, 89%); */
     text-align: center;
     padding-top: 1.5rem;
     border-radius: 0.25rem;
     font-size: 1.75rem;
-    /* box-shadow: 0 5px hsl(28, 16%, 65%); */
     transition: all 0.5s;
 }
 .btn-2-1 {
@@ -121,9 +114,6 @@ h2 {
     padding-top: 1.75rem;
     border-radius: 0.25rem;
     font-size: 1.25rem;
-    /* color: hsl(0, 0%, 100%); */
-    /* background-color: hsl(225, 21%, 49%);
-    box-shadow: 0 5px hsl(224, 28%, 35%); */
     transition: all 0.5s;
 }
 .btn-2-2 {
@@ -133,67 +123,47 @@ h2 {
     padding-top: 1.75rem;
     border-radius: 0.25rem;
     font-size: 1.25rem;
-    /* color: hsl(0, 0%, 100%); */
-    /* background-color: hsl(225, 21%, 49%);
-    box-shadow: 0 5px hsl(224, 28%, 35%); */
     transition: all 0.5s;
 }
 .btn-3 {
     width: 8.65rem;
     height: 2.75rem;
-    /* color: hsl(0, 0%, 100%); */
-    /* background-color: hsl(6, 63%, 50%); */
     text-align: center;
     padding-top: 1.5rem;
     border-radius: 0.25rem;
     font-size: 1.75rem;
-    /* box-shadow: 0 5px hsl(6, 70%, 34%); */
     transition: all 0.5s;
 }
-.btn-1:hover {
-    cursor: pointer;
-    /* background-color: hsl(0, 0%, 100%); */
-}
-.btn-2:hover, .btn-3:hover {
-    cursor: pointer;
-    /* filter: brightness(125%); */
-}
+.btn-2:hover, .btn-3:hover, .btn-1:hover {cursor: pointer;}
 
 
 /* The Toggle*/
-input[type="checkbox"].check{
-    position: absolute;
-    opacity: 0;
-    left: -100rem;
-    top: -100rem;
-}
-input[type="checkbox"].check + label{
+.toggle {
     display: flex;
+    justify-content: center;
     position: relative;
-    cursor: pointer;
-}
-input[type="checkbox"].check + label::before {
-    content: "";
+    border-radius: 2rem;
+    height: 1.35rem;
     width: 4.5rem;
-    height: 1.5rem;
-    /* background-color: hsl(223, 31%, 20%); */
-    border-radius: 1rem;
 }
-input[type="checkbox"].check + label::after {
-    content: "";
+.toggle:hover {cursor: pointer;}
+input {
     position: absolute;
-    left: 0.25rem;
-    top: 0.25rem;
-    width: 1rem;
     height: 1rem;
-    /* background-color: hsl(6, 63%, 50%); */
+    width: 1rem;
+    appearance: none;
     border-radius: 50%;
+    opacity: 0;
     transition: all 0.75s;
 }
-input[type="checkbox"].check:checked + label::after {
-    transform: translateX(300%);
-    /* background-color: hsl(6, 63%, 50%); */
-}
-input[type="checkbox"].check:hover + label::after {
+input:hover {
+    cursor: pointer;
     filter: brightness(125%);
 }
+#one {
+    opacity: 1;
+    left: 0;
+    top: 0;
+}
+#two {left: 1.35rem; top: 0;}
+#three {left: 2.8rem; top: 0;}
