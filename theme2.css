@@ -16,6 +16,7 @@ h1, h2, h3, p {color: hsl(60, 10%, 19%);}
 .btn-2-1 {
     background-color: hsl(185, 42%, 37%);
     box-shadow: 0 5px hsl(185, 58%, 25%);
+    color: hsl(0, 0%, 100%);
 }
 .btn-2-2 {
     background-color: hsl(185, 42%, 37%);

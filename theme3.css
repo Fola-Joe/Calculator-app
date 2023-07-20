@@ -1,0 +1,41 @@
+body {
+    background-color:  hsl(268, 75%, 9%);
+}
+h1, h2, h3, p {color: hsl(52, 100%, 62%)}
+.display-section {
+    background-color: hsl(268, 71%, 12%);
+}
+.button-section {
+    background-color: hsl(268, 71%, 12%);
+}
+.btn-1 {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0 5px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+.btn-2-1 {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 5px hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+.btn-2-2 {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 5px hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+.btn-3{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0 5px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+.btn-2:hover, .btn-3:hover, .btn-1:hover {
+    filter: brightness(175%);
+}
+
+input[type="checkbox"].check + label::before {
+    background-color: hsl(268, 71%, 12%);
+}
+input[type="checkbox"].check + label::after {
+    background-color: hsl(176, 100%, 44%);
+}
