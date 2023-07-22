@@ -49,10 +49,16 @@ function calculate() {
       displayScreen.value = 'Invalid input';
     }  
     // Check if the result is an integer (whole number)
-    else if (Number.isInteger(total)) {
-      displayScreen.value = total;
-    } else {
+    // else if (Number.isInteger(total)) {
+    //   displayScreen.value = total;
+    // } else {
+    //   displayScreen.value = total.toFixed(7);
+    // }
+
+    else if (hasDecimalsMoreThanFive(total)){
       displayScreen.value = total.toFixed(7);
+    } else {
+      displayScreen.value = total;
     }
   } catch (error) {
     displayScreen.value = '';
@@ -68,4 +74,11 @@ function clearDisplay() {
 function deleteLastCharacter() {
   const result = displayScreen.value;
   displayScreen.value = result.slice(0, -1);
+}
+
+function hasDecimalsMoreThanFive(number) {
+  const decimalPart = Math.abs(number % 1);
+  const decimalString = decimalPart.toString();
+  // Five decimal places + one digit before the decimal point
+  return decimalString.length > 7; 
 }
