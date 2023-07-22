@@ -47,15 +47,7 @@ function calculate() {
     // Check if the result is Infinity or -Infinity (division by zero)
     if (!isFinite(total)) {
       displayScreen.value = 'Invalid input';
-    }  
-    // Check if the result is an integer (whole number)
-    // else if (Number.isInteger(total)) {
-    //   displayScreen.value = total;
-    // } else {
-    //   displayScreen.value = total.toFixed(7);
-    // }
-
-    else if (hasDecimalsMoreThanFive(total)){
+    } else if (hasDecimalsMoreThanSeven(total)){
       displayScreen.value = total.toFixed(7);
     } else {
       displayScreen.value = total;
@@ -76,9 +68,9 @@ function deleteLastCharacter() {
   displayScreen.value = result.slice(0, -1);
 }
 
-function hasDecimalsMoreThanFive(number) {
+//function to check if answer has decimals more than 7
+function hasDecimalsMoreThanSeven(number) {
   const decimalPart = Math.abs(number % 1);
   const decimalString = decimalPart.toString();
-  // Five decimal places + one digit before the decimal point
   return decimalString.length > 7; 
 }
