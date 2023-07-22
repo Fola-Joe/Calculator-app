@@ -31,34 +31,40 @@ arr.forEach((element, index) => {
 
 
 //calculation operations
-
-const numButtons = document.querySelectorAll('.btn-1');
-const operationBtns = document.querySelectorAll('.btn-1-2');
-const equalBtn = document.querySelector('.btn-3');
-const deleteBtn = document.querySelector('.btn-2-1');
-const resetBtn = document.querySelector('.btn-2-2');
-
 const displayScreen = document.querySelector('#screen');
 
+//appending values as buttons are clicked
 function appendToDisplay(value) {
   displayScreen.value += value;
 }
 
+//calculation function
 function calculate() {
   const result = displayScreen.value;
   try {
     const total = eval(result);
-    displayScreen.value = total;
+
+    // Check if the result is Infinity or -Infinity (division by zero)
+    if (!isFinite(total)) {
+      displayScreen.value = 'Invalid input';
+    }  
+    // Check if the result is an integer (whole number)
+    else if (Number.isInteger(total)) {
+      displayScreen.value = total;
+    } else {
+      displayScreen.value = total.toFixed(7);
+    }
   } catch (error) {
     displayScreen.value = '';
   }
 }
 
+//clear screen function
 function clearDisplay() {
   displayScreen.value = '';
 }
 
-
+//deleting last character function
 function deleteLastCharacter() {
   const result = displayScreen.value;
   displayScreen.value = result.slice(0, -1);
