@@ -2,9 +2,10 @@ body {
     background-color:  hsl(268, 75%, 9%);
 }
 h1, h2, h3, p {color: hsl(52, 100%, 62%)}
-.display-section {
+#screen {
     background-color: hsl(268, 71%, 12%);
 }
+::placeholder{color: hsl(52, 100%, 62%);}
 .button-section {
     background-color: hsl(268, 71%, 12%);
 }
@@ -33,7 +34,7 @@ h1, h2, h3, p {color: hsl(52, 100%, 62%)}
     filter: brightness(175%);
 }
 
-#three {
+#toggle-three {
     background-color: hsl(176, 100%, 44%);
     left: 2.9rem;
     top: 0;
