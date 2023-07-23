@@ -19,15 +19,39 @@
           <p>2</p>
           <p>3</p>
           <div class="toggle">
-            <input class="button" type="radio" name="toggle" id="toggle-one" />
-            <input class="button" type="radio" name="toggle" id="toggle-two" />
-            <input class="button" type="radio" name="toggle" id="toggle-three" />
+            <input 
+            class="button" 
+            type="radio" 
+            name="toggle" 
+            id="toggle-one" 
+            aria-label="first toggle button"/>
+            <input 
+            class="button" 
+            type="radio" 
+            name="toggle" 
+            id="toggle-two" 
+            aria-label="second toggle button"/>
+            <input 
+            class="button" 
+            type="radio" 
+            name="toggle" 
+            id="toggle-three"
+            aria-label="third toggle button"/>
+            <!-- "aria-label" attribute is a set of attributes that can be used to 
+            enhance the accessibility of web content, especially 
+            for users with disabilities -->
           </div>
         </div>
       </div>
     </nav>
     <section class="display-section">
-      <input type="text" id="screen" name="display" placeholder="0" readonly>
+      <input 
+      type="text" 
+      id="screen" 
+      name="display" 
+      placeholder="0" 
+      aria-label="calculator display" 
+      readonly>
     </section>
     <section class="button-section">
       <div class="line-1">
